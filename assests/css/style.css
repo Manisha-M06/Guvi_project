@@ -1,0 +1,42 @@
+/* assets/css/style.css */
+
+/* General Card Styling */
+.card {
+    border-radius: 15px; /* Neenga sonna maadhiri 15px radius */
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Card-ku konjam animation effect */
+}
+
+/* Header Styling */
+.card-header {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+}
+
+/* Message Styling */
+#msg {
+    font-weight: bold; /* Bold weight */
+    font-size: 0.9rem;
+}
+
+/* Button Styling */
+.btn {
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* Profile Image Preview */
+#preview, #d_image {
+    transition: border-color 0.3s;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
