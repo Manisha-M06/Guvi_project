@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
+    <title>Register - College Connect</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assests/css/style.css">
 </head>
@@ -12,7 +12,9 @@
             <h3 class="text-center text-primary mb-4">Register</h3>
             <div class="mb-3">
                 <label>Email address</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter email">
+                <input type="email" id="email" class="form-control" placeholder="Enter email" 
+                       pattern="^[a-zA-Z][a-zA-Z0-9._]*@gmail\.com$" 
+                       title="Email must start with an alphabet and end with @gmail.com">
             </div>
             <div class="mb-3">
                 <label>Password</label>
@@ -25,7 +27,6 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
     
@@ -36,14 +37,9 @@
             projectId: "guvi-project-69bcb",
             appId: "1:733460974902:web:ad910514680241334bb797"
         };
-        // Initialize Firebase
-        if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-        }
-        // Define auth variable (Idhu dhaan romba mukkiyam)
+        if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
         const auth = firebase.auth(); 
     </script>
-
     <script src="assests/js/register.js"></script>
 </body>
 </html>
