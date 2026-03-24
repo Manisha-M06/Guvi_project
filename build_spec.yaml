@@ -1,23 +1,16 @@
 version: 0.1
 
-timeoutInSeconds: 600
+component: build
 
-shell: bash
+steps:
+  - type: Command
+    name: "Install"
+    command: echo "Installing..."
 
-phases:
-  install:
-    commands:
-      - echo "Installing dependencies (if any)"
+  - type: Command
+    name: "Build"
+    command: echo "Building project..."
 
-  build:
-    commands:
-      - echo "Build started"
-      - ls -la
-
-  post_build:
-    commands:
-      - echo "Build completed"
-
-artifacts:
-  files:
-    - '**/*'
+  - type: Command
+    name: "Run"
+    command: echo "Running project..."
